@@ -68,3 +68,9 @@ yarn add dva-core@next dva-loading@next react-redux
 ```bash
 yarn add lodash prop-types
 ```
+
+添加请求库：
+
+```bash
+yarn add qs axios
+```
