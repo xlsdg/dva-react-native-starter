@@ -74,3 +74,9 @@ yarn add lodash prop-types
 ```bash
 yarn add qs axios
 ```
+
+删除 `App.js`，修改 `index.js`：
+
+```js
+import './src/app';
+```
