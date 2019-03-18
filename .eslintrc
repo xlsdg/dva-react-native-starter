@@ -1,0 +1,65 @@
+{
+  "env": {
+    "amd": false,
+    "applescript": false,
+    "atomtest": false,
+    "browser": true,
+    "commonjs": false,
+    "embertest": false,
+    "es6": true,
+    "greasemonkey": false,
+    "jasmine": false,
+    "jest": true,
+    "jquery": false,
+    "meteor": false,
+    "mocha": false,
+    "mongo": false,
+    "nashorn": false,
+    "node": true,
+    "phantomjs": false,
+    "prototypejs": false,
+    "protractor": false,
+    "qunit": false,
+    "serviceworker": false,
+    "shared-node-browser": false,
+    "shelljs": false,
+    "webextensions": false,
+    "worker": false
+  },
+  "extends": [
+    "airbnb",
+    "plugin:react/recommended",
+    "plugin:prettier/recommended",
+    "prettier/react"
+  ],
+  "globals": {
+    "__DEV__": true
+  },
+  "parser": "babel-eslint",
+  "parserOptions": {
+    "ecmaFeatures": {
+      "jsx": true
+    },
+    "ecmaVersion": 2018,
+    "sourceType": "module"
+  },
+  "plugins": [
+    "import",
+    "jsx-a11y",
+    "react",
+    "react-hooks",
+    "prettier"
+  ],
+  "root": true,
+  "rules": {
+    "prettier/prettier": "error",
+    "react-hooks/rules-of-hooks": "error",
+    "react/jsx-filename-extension": ["warn", { "extensions": [".js"] }],
+    "import/prefer-default-export": "off"
+  },
+  "settings": {
+    "import/resolver": {
+      "babel-module": {}
+    }
+  }
+}
