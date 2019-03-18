@@ -43,7 +43,7 @@ yarn add -D babel-eslint eslint eslint-config-airbnb eslint-config-prettier esli
 重命名 `babel.config.js` 为 `.babel.rc`，修改 `Babel`：
 
 ```bash
-yarn add -D babel-plugin-module-resolver babel-plugin-transform-react-remove-prop-types babel-plugin-transform-remove-console babel-plugin-transform-remove-debugger babel-plugin-lodash
+yarn add -D babel-plugin-module-resolver babel-plugin-transform-react-remove-prop-types babel-plugin-transform-remove-console babel-plugin-transform-remove-debugger babel-plugin-lodash eslint-plugin-react-hooks
 ```
 
 添加导航：
