@@ -62,7 +62,11 @@ function handleReqError(err, onError) {
     return Promise.reject(err);
   }
 
-  return onError(err);
+  if (_.isFunction(onError)) {
+    return onError(err);
+  }
+
+  return Promise.reject(err);
 }
 
 function handleRequest(req, onError) {
