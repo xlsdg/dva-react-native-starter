@@ -1,13 +1,11 @@
 import _ from 'lodash';
 
-import { NS_APP } from '@/redux/namespaces/index';
+import { NS_MINE } from '@/redux/namespaces/index';
 
-const initialState = {
-  loading: false,
-};
+const initialState = {};
 
 export default {
-  namespace: NS_APP,
+  namespace: NS_MINE,
   state: _.cloneDeep(initialState),
   reducers: {},
   effects: {},

@@ -6,7 +6,7 @@ import { connect } from 'react-redux';
 import { createReduxContainer } from 'react-navigation-redux-helpers';
 
 import PageLoading from '@/components/PageLoading';
-import { NS_APP } from '@/redux/namespaces/index';
+import { NS_HOME } from '@/redux/namespaces/index';
 import { AppNavigator } from '@/routes/navigator';
 
 const App = createReduxContainer(AppNavigator);
@@ -37,7 +37,7 @@ class Router extends React.PureComponent {
   render() {
     const that = this;
     const { dispatch, router } = that.props;
-    const { loading } = that.props[NS_APP];
+    const { loading } = that.props[NS_HOME];
 
     return loading ? <PageLoading /> : <App dispatch={dispatch} state={router} />;
   }
@@ -46,7 +46,7 @@ class Router extends React.PureComponent {
 function mapStateToProps(state) {
   return {
     router: state.router,
-    [NS_APP]: _.cloneDeep(state[NS_APP]),
+    [NS_HOME]: _.cloneDeep(state[NS_HOME]),
   };
 }
 

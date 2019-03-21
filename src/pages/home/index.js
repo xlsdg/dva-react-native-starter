@@ -3,7 +3,7 @@ import React from 'react';
 import { Platform, StyleSheet, Text, View } from 'react-native';
 import { connect } from 'react-redux';
 
-import { NS_APP } from '@/redux/namespaces/index';
+import { NS_HOME } from '@/redux/namespaces/index';
 
 const styles = StyleSheet.create({
   container: {
@@ -29,7 +29,7 @@ const instructions = Platform.select({
   android: `Double tap R on your keyboard to reload,\nShake or press menu button for dev menu`,
 });
 
-class Main extends React.Component {
+class HomeScreen extends React.Component {
   componentDidMount() {
     const that = this;
     console.log('componentDidMount', that.props, that.state);
@@ -42,7 +42,7 @@ class Main extends React.Component {
 
     return (
       <View style={styles.container}>
-        <Text style={styles.welcome}>Welcome to React Native!</Text>
+        <Text style={styles.welcome}>Home</Text>
         <Text style={styles.instructions}>To get started, edit App.js</Text>
         <Text style={styles.instructions}>{instructions}</Text>
         <Text>{JSON.stringify(that.props)}</Text>
@@ -54,7 +54,7 @@ class Main extends React.Component {
 function mapStateToProps(state) {
   return {
     loading: state.loading,
-    [NS_APP]: state[NS_APP],
+    [NS_HOME]: state[NS_HOME],
   };
 }
 
@@ -62,4 +62,4 @@ function mapStateToProps(state) {
 //   return {};
 // }
 
-export default connect(mapStateToProps)(Main);
+export default connect(mapStateToProps)(HomeScreen);

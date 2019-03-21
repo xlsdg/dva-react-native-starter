@@ -1,5 +1,7 @@
-import AppModel from '@/redux/models/app';
+import HomeModel from '@/redux/models/home';
+import AssetsModel from '@/redux/models/assets';
+import MineModel from '@/redux/models/mine';
 
 export default function getModels() {
-  return [AppModel];
+  return [HomeModel, AssetsModel, MineModel];
 }

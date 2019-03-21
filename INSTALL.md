@@ -55,7 +55,7 @@ react-native link react-native-gesture-handler
 
 修改 `android/app/src/main/java/com/dvareactnativestarter/MainActivity.java` 文件：
 
-参考：https://reactnavigation.org/docs/en/getting-started.html
+参考：https://reactnavigation.org/docs/en/getting-started.html 或 https://kmagiera.github.io/react-native-gesture-handler/docs/getting-started.html
 
 添加 `Dva.js`：
 
