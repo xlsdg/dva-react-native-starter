@@ -6,7 +6,7 @@
 react-native init DvaReactNativeStarter
 ```
 
-修改 `package.json` 的 `name` 字段：
+修改 `package.json`：
 
 ```json
 {
