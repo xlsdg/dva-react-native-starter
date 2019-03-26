@@ -27,8 +27,7 @@
     "worker": false
   },
   "extends": [
-    "airbnb",
-    "plugin:react/recommended",
+    "eslint-config-alloy/react",
     "plugin:prettier/recommended",
     "prettier/react"
   ],
@@ -44,9 +43,6 @@
     "sourceType": "module"
   },
   "plugins": [
-    "import",
-    "jsx-a11y",
-    "react",
     "react-hooks",
     "prettier"
   ],
@@ -54,8 +50,7 @@
   "rules": {
     "prettier/prettier": "error",
     "react-hooks/rules-of-hooks": "error",
-    "react/jsx-filename-extension": ["warn", { "extensions": [".js"] }],
-    "import/prefer-default-export": "off"
+    "react/jsx-filename-extension": ["warn", { "extensions": [".js"] }]
   },
   "settings": {
     "import/resolver": {
