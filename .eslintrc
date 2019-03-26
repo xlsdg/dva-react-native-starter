@@ -27,7 +27,7 @@
     "worker": false
   },
   "extends": [
-    "eslint-config-alloy/react",
+    "@react-native-community",
     "plugin:prettier/recommended",
     "prettier/react"
   ],
@@ -43,13 +43,11 @@
     "sourceType": "module"
   },
   "plugins": [
-    "react-hooks",
     "prettier"
   ],
   "root": true,
   "rules": {
     "prettier/prettier": "error",
-    "react-hooks/rules-of-hooks": "error",
     "react/jsx-filename-extension": ["warn", { "extensions": [".js"] }]
   },
   "settings": {

@@ -10,7 +10,16 @@ react-native init DvaReactNativeStarter
 
 ```json
 {
-  "name": "dva-react-native-starter"
+  "name": "dva-react-native-starter",
+  "scripts": {
+    "start": "react-native start --reset-cache",
+    "ios": "react-native run-ios",
+    "ios:native": "react-native run-ios --device",
+    "android": "react-native run-android",
+    "test": "jest",
+    "lint": "eslint --ext .js src",
+    "lint:fix": "eslint --fix --ext .js src"
+  }
 }
 ```
 
@@ -37,13 +46,13 @@ yarn add -D lint-staged husky @commitlint/cli @commitlint/config-conventional
 添加 `ESLint`：
 
 ```bash
-yarn add -D babel-eslint eslint eslint-config-airbnb eslint-config-prettier eslint-plugin-import eslint-plugin-jsx-a11y eslint-plugin-prettier eslint-plugin-react eslint-import-resolver-babel-module prettier
+yarn add -D babel-eslint eslint eslint-config-prettier eslint-plugin-prettier eslint-import-resolver-babel-module prettier
 ```
 
 重命名 `babel.config.js` 为 `.babel.rc`，修改 `Babel`：
 
 ```bash
-yarn add -D babel-plugin-module-resolver babel-plugin-transform-react-remove-prop-types babel-plugin-transform-remove-console babel-plugin-transform-remove-debugger babel-plugin-lodash eslint-plugin-react-hooks
+yarn add -D babel-plugin-module-resolver babel-plugin-transform-react-remove-prop-types babel-plugin-transform-remove-console babel-plugin-transform-remove-debugger babel-plugin-lodash
 ```
 
 添加导航：
