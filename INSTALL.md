@@ -84,7 +84,7 @@ yarn add lodash prop-types
 yarn add qs axios
 ```
 
-删除 `App.js`，修改 `index.js`：
+删除 `App.js`，拷贝 `src` 文件夹，修改 `index.js`：
 
 ```js
 import './src/app';
