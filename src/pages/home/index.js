@@ -29,26 +29,19 @@ const instructions = Platform.select({
   android: `Double tap R on your keyboard to reload,\nShake or press menu button for dev menu`,
 });
 
-class HomeScreen extends React.Component {
-  componentDidMount() {
-    const that = this;
-    console.log('componentDidMount', that.props, that.state);
-    // const {  } = that.props;
-    // const {  } = that.state;
-  }
+HomeScreen.propTypes = {};
 
-  render() {
-    const that = this;
+HomeScreen.defaultProps = {};
 
-    return (
-      <View style={styles.container}>
-        <Text style={styles.welcome}>Home</Text>
-        <Text style={styles.instructions}>To get started, edit App.js</Text>
-        <Text style={styles.instructions}>{instructions}</Text>
-        <Text>{JSON.stringify(that.props)}</Text>
-      </View>
-    );
-  }
+function HomeScreen(props) {
+  return (
+    <View style={styles.container}>
+      <Text style={styles.welcome}>Assets</Text>
+      <Text style={styles.instructions}>To get started, edit App.js</Text>
+      <Text style={styles.instructions}>{instructions}</Text>
+      <Text>{JSON.stringify(props)}</Text>
+    </View>
+  );
 }
 
 function mapStateToProps(state) {

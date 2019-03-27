@@ -29,26 +29,19 @@ const instructions = Platform.select({
   android: `Double tap R on your keyboard to reload,\nShake or press menu button for dev menu`,
 });
 
-class MineScreen extends React.Component {
-  componentDidMount() {
-    const that = this;
-    console.log('componentDidMount', that.props, that.state);
-    // const {  } = that.props;
-    // const {  } = that.state;
-  }
+MineScreen.propTypes = {};
 
-  render() {
-    const that = this;
+MineScreen.defaultProps = {};
 
-    return (
-      <View style={styles.container}>
-        <Text style={styles.welcome}>Mine</Text>
-        <Text style={styles.instructions}>To get started, edit App.js</Text>
-        <Text style={styles.instructions}>{instructions}</Text>
-        <Text>{JSON.stringify(that.props)}</Text>
-      </View>
-    );
-  }
+function MineScreen(props) {
+  return (
+    <View style={styles.container}>
+      <Text style={styles.welcome}>Assets</Text>
+      <Text style={styles.instructions}>To get started, edit App.js</Text>
+      <Text style={styles.instructions}>{instructions}</Text>
+      <Text>{JSON.stringify(props)}</Text>
+    </View>
+  );
 }
 
 function mapStateToProps(state) {
