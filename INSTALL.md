@@ -14,7 +14,7 @@ react-native init DvaReactNativeStarter
   "scripts": {
     "start": "react-native start --reset-cache",
     "ios": "react-native run-ios",
-    "ios:native": "react-native run-ios --device",
+    "ios:device": "react-native run-ios --device",
     "android": "react-native run-android",
     "test": "jest",
     "lint": "eslint --ext .js src",
