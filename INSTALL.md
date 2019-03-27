@@ -23,7 +23,7 @@ react-native init DvaReactNativeStarter
 }
 ```
 
-添加 `VSCode` 的工作区设置：
+添加 `.vscode/settings.json` 文件：
 
 ```json
 {
@@ -49,7 +49,7 @@ yarn add -D lint-staged husky @commitlint/cli @commitlint/config-conventional
 yarn add -D babel-eslint eslint eslint-config-prettier eslint-plugin-prettier eslint-import-resolver-babel-module prettier
 ```
 
-重命名 `babel.config.js` 为 `.babel.rc`，修改 `Babel`：
+删除 `babel.config.js`，添加 `Babel`：
 
 ```bash
 yarn add -D babel-plugin-module-resolver babel-plugin-transform-react-remove-prop-types babel-plugin-transform-remove-console babel-plugin-transform-remove-debugger babel-plugin-lodash
