@@ -46,7 +46,7 @@ yarn add -D lint-staged husky @commitlint/cli @commitlint/config-conventional
 添加 `ESLint`：
 
 ```bash
-yarn add -D babel-eslint eslint eslint-config-prettier eslint-plugin-prettier eslint-import-resolver-babel-module prettier
+yarn add -D babel-eslint eslint eslint-config-prettier eslint-plugin-prettier eslint-config-alloy eslint-plugin-react eslint-plugin-react-hooks eslint-import-resolver-babel-module prettier
 ```
 
 删除 `babel.config.js`，添加 `Babel`：
