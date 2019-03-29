@@ -15,7 +15,13 @@
     ["module-resolver", {
       "cwd": "babelrc",
       "root": ["./src"],
-      "extensions": [".ios.js", ".android.js", ".native.js", ".js", ".json"],
+      "extensions": [
+        ".ios.js",
+        ".android.js",
+        ".native.js",
+        ".js",
+        ".json"
+      ],
       "alias": {
         "@": "./src"
       }

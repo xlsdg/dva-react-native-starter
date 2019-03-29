@@ -23,20 +23,6 @@ react-native init DvaReactNativeStarter
 }
 ```
 
-添加 `.vscode/settings.json` 文件：
-
-```json
-{
-  "javascript.validate.enable": false
-}
-```
-
-根据 `.flowconfig` 添加特定版本的 `Flow`：
-
-```bash
-yarn add -D flow-bin@0.92.0
-```
-
 添加 `CommitLint`：
 
 ```bash
