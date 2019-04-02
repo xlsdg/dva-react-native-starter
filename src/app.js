@@ -13,9 +13,9 @@ const app = dva({
   models: getModels(),
   extraReducers: { router: routerReducer },
   onAction: [routerMiddleware],
-  onError(error) {
-    console.error(error);
-  },
+  // onError: (error, dispatch) => {
+  //   console.error(error);
+  // },
 });
 
 const App = app.started(<Router />);

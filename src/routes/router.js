@@ -12,7 +12,7 @@ import { AppNavigator } from '@/routes/navigator';
 const App = createReduxContainer(AppNavigator);
 
 class Router extends React.PureComponent {
-  componentWillMount() {
+  componentDidMount() {
     const that = this;
     BackHandler.addEventListener('hardwareBackPress', that.onBackPress);
   }
@@ -28,6 +28,7 @@ class Router extends React.PureComponent {
 
     if (router.index === 0) {
       return false;
+      // return BackHandler.exitApp();
     }
 
     dispatch(NavigationActions.back());
