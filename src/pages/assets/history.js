@@ -1,8 +1,7 @@
 // import _ from 'lodash';
 import React from 'react';
-import { StyleSheet, Text } from 'react-native';
+import { StyleSheet, Text, View } from 'react-native';
 import { connect } from 'react-redux';
-import { SafeAreaView } from 'react-navigation';
 
 import { NS_ASSETS } from '@/redux/namespaces/index';
 
@@ -12,21 +11,19 @@ const styles = StyleSheet.create({
   },
 });
 
-AssetsScreen.navigationOptions = props => {
-  return {
-    header: null,
-  };
+HistoryScreen.navigationOptions = props => {
+  return {};
 };
 
-AssetsScreen.propTypes = {};
+HistoryScreen.propTypes = {};
 
-AssetsScreen.defaultProps = {};
+HistoryScreen.defaultProps = {};
 
-function AssetsScreen(props) {
+function HistoryScreen(props) {
   return (
-    <SafeAreaView style={styles.container}>
-      <Text>Assets</Text>
-    </SafeAreaView>
+    <View style={styles.container}>
+      <Text>History</Text>
+    </View>
   );
 }
 
@@ -41,4 +38,4 @@ function mapStateToProps(state) {
 //   return {};
 // }
 
-export default connect(mapStateToProps)(AssetsScreen);
+export default connect(mapStateToProps)(HistoryScreen);

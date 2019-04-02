@@ -11,24 +11,16 @@ const styles = StyleSheet.create({
   },
 });
 
-HomeScreen.navigationOptions = props => {
-  return {
-    title: 'Hello',
-    // headerRight: ,
-    headerStyle: {
-      borderBottomWidth: 0,
-    },
-  };
-};
+DetailScreen.navigationOptions = props => ({});
 
-HomeScreen.propTypes = {};
+DetailScreen.propTypes = {};
 
-HomeScreen.defaultProps = {};
+DetailScreen.defaultProps = {};
 
-function HomeScreen(props) {
+function DetailScreen(props) {
   return (
     <View style={styles.container}>
-      <Text>Home</Text>
+      <Text>Detail</Text>
     </View>
   );
 }
@@ -44,4 +36,4 @@ function mapStateToProps(state) {
 //   return {};
 // }
 
-export default connect(mapStateToProps)(HomeScreen);
+export default connect(mapStateToProps)(DetailScreen);

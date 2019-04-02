@@ -1,3 +1,4 @@
+// import _ from 'lodash';
 import { createReactNavigationReduxMiddleware, createNavigationReducer } from 'react-navigation-redux-helpers';
 
 import { AppNavigator } from '@/routes/navigator';

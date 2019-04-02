@@ -1,27 +1,167 @@
+// import _ from 'lodash';
 import { createStackNavigator, createBottomTabNavigator } from 'react-navigation';
 
-import HomeScreen from '@/pages/home/index';
-import AssetsScreen from '@/pages/assets/index';
-import MineScreen from '@/pages/mine/index';
+import HomeTabNavigatorOptions from '@/pages/home/tab';
+import HomeStackRouteConfigs from '@/pages/home/screen';
 
-const HomeStack = createStackNavigator({
-  Home: HomeScreen,
-});
+import AssetsTabNavigatorOptions from '@/pages/assets/tab';
+import AssetsStackRouteConfigs from '@/pages/assets/screen';
 
-const AssetsStack = createStackNavigator({
-  Assets: AssetsScreen,
-});
+import MineTabNavigatorOptions from '@/pages/mine/tab';
+import MineScreenRouteConfigs from '@/pages/mine/screen';
 
-const MineStack = createStackNavigator({
-  Mine: MineScreen,
-});
+import WebViewScreen from '@/pages/webview';
 
-const RouteConfigs = {
-  Home: HomeStack,
-  Assets: AssetsStack,
-  Mine: MineStack,
+const HomeStackConfig = {
+  // initialRouteName: ,
+  // initialRouteParams: ,
+  // initialRouteKey: ,
+  // defaultNavigationOptions: ,
+  // paths: ,
+  // mode: ,
+  // headerMode: 'none',
+  // headerBackTitleVisible: ,
+  // headerTransitionPreset: ,
+  headerLayoutPreset: 'center',
+  // cardStyle: ,
+  // cardShadowEnabled: ,
+  // cardOverlayEnabled: ,
+  // transitionConfig: ,
+  // onTransitionStart: ,
+  // onTransitionEnd: ,
+  // transparentCard: ,
+};
+const HomeStack = createStackNavigator(HomeStackRouteConfigs, HomeStackConfig);
+
+const AssetsStackConfig = {
+  // initialRouteName: ,
+  // initialRouteParams: ,
+  // initialRouteKey: ,
+  // defaultNavigationOptions: ,
+  // paths: ,
+  // mode: ,
+  // headerMode: 'none',
+  // headerBackTitleVisible: ,
+  // headerTransitionPreset: ,
+  headerLayoutPreset: 'center',
+  // cardStyle: ,
+  // cardShadowEnabled: ,
+  // cardOverlayEnabled: ,
+  // transitionConfig: ,
+  // onTransitionStart: ,
+  // onTransitionEnd: ,
+  // transparentCard: ,
+};
+const AssetsStack = createStackNavigator(AssetsStackRouteConfigs, AssetsStackConfig);
+
+const MineScreenConfig = {
+  // initialRouteName: ,
+  // initialRouteParams: ,
+  // initialRouteKey: ,
+  // defaultNavigationOptions: ,
+  // paths: ,
+  // mode: ,
+  // headerMode: 'none',
+  // headerBackTitleVisible: ,
+  // headerTransitionPreset: ,
+  headerLayoutPreset: 'center',
+  // cardStyle: ,
+  // cardShadowEnabled: ,
+  // cardOverlayEnabled: ,
+  // transitionConfig: ,
+  // onTransitionStart: ,
+  // onTransitionEnd: ,
+  // transparentCard: ,
+};
+const MineStack = createStackNavigator(MineScreenRouteConfigs, MineScreenConfig);
+
+const BottomTabNavigatorRouteConfigs = {
+  Home: {
+    screen: HomeStack,
+    // path: '',
+    navigationOptions: HomeTabNavigatorOptions,
+  },
+  Assets: {
+    screen: AssetsStack,
+    // path: '',
+    navigationOptions: AssetsTabNavigatorOptions,
+  },
+  Mine: {
+    screen: MineStack,
+    // path: '',
+    navigationOptions: MineTabNavigatorOptions,
+  },
 };
 
-const BottomTabNavigatorConfig = {};
+const BottomTabNavigatorConfig = {
+  initialRouteName: 'Home',
+  // resetOnBlur: false,
+  // order: [],
+  // paths: ,
+  // backBehavior: ,
+  // lazy: true,
+  // tabBarComponent: ,
+  tabBarOptions: {
+    activeTintColor: '#222',
+    // activeBackgroundColor: '',
+    inactiveTintColor: '#777',
+    // inactiveBackgroundColor: '',
+    showLabel: true,
+    showIcon: true,
+    style: {
+      borderTopWidth: 0,
+      shadowColor: '#525072',
+      shadowOffset: {
+        width: 0,
+        height: 0,
+      },
+      shadowOpacity: 0.1,
+      shadowRadius: 5,
+      elevation: 50,
+    },
+    // labelStyle: ,
+    // tabStyle: ,
+    // allowFontScaling: true,
+    // safeAreaInset: {
+    //   top: 'never',
+    //   right: 'never',
+    //   bottom: 'always',
+    //   left: 'never',
+    // },
+  },
+};
 
-export const AppNavigator = createBottomTabNavigator(RouteConfigs, BottomTabNavigatorConfig);
+const BottomTabNavigator = createBottomTabNavigator(BottomTabNavigatorRouteConfigs, BottomTabNavigatorConfig);
+
+const MainScreenRouteConfigs = {
+  Tabs: {
+    screen: BottomTabNavigator,
+    // path: '',
+    // navigationOptions: () => ({}),
+  },
+  WebView: {
+    screen: WebViewScreen,
+    // path: '',
+    // navigationOptions: () => ({}),
+  },
+};
+const MainScreenConfig = {
+  initialRouteName: 'Tabs',
+  // initialRouteParams: ,
+  // initialRouteKey: ,
+  // defaultNavigationOptions: ,
+  // paths: ,
+  // mode: ,
+  headerMode: 'none',
+  // headerBackTitleVisible: ,
+  // headerTransitionPreset: ,
+  headerLayoutPreset: 'center',
+  // cardStyle: ,
+  // cardShadowEnabled: ,
+  // cardOverlayEnabled: ,
+  // transitionConfig: ,
+  // onTransitionStart: ,
+  // onTransitionEnd: ,
+  // transparentCard: ,
+};
+export const AppNavigator = createStackNavigator(MainScreenRouteConfigs, MainScreenConfig);

@@ -4,7 +4,7 @@ import { StyleSheet, Text } from 'react-native';
 import { connect } from 'react-redux';
 import { SafeAreaView } from 'react-navigation';
 
-import { NS_ASSETS } from '@/redux/namespaces/index';
+import { NS_HOME } from '@/redux/namespaces/index';
 
 const styles = StyleSheet.create({
   container: {
@@ -12,20 +12,20 @@ const styles = StyleSheet.create({
   },
 });
 
-AssetsScreen.navigationOptions = props => {
+SearchScreen.navigationOptions = props => {
   return {
     header: null,
   };
 };
 
-AssetsScreen.propTypes = {};
+SearchScreen.propTypes = {};
 
-AssetsScreen.defaultProps = {};
+SearchScreen.defaultProps = {};
 
-function AssetsScreen(props) {
+function SearchScreen(props) {
   return (
     <SafeAreaView style={styles.container}>
-      <Text>Assets</Text>
+      <Text>Search</Text>
     </SafeAreaView>
   );
 }
@@ -33,7 +33,7 @@ function AssetsScreen(props) {
 function mapStateToProps(state) {
   return {
     loading: state.loading,
-    [NS_ASSETS]: state[NS_ASSETS],
+    [NS_HOME]: state[NS_HOME],
   };
 }
 
@@ -41,4 +41,4 @@ function mapStateToProps(state) {
 //   return {};
 // }
 
-export default connect(mapStateToProps)(AssetsScreen);
+export default connect(mapStateToProps)(SearchScreen);

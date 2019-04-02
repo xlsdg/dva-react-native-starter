@@ -1,8 +1,7 @@
 // import _ from 'lodash';
 import React from 'react';
-import { StyleSheet, Text } from 'react-native';
+import { StyleSheet, Text, View } from 'react-native';
 import { connect } from 'react-redux';
-import { SafeAreaView } from 'react-navigation';
 
 import { NS_MINE } from '@/redux/namespaces/index';
 
@@ -12,21 +11,19 @@ const styles = StyleSheet.create({
   },
 });
 
-MineScreen.navigationOptions = props => {
-  return {
-    header: null,
-  };
+HelpScreen.navigationOptions = props => {
+  return {};
 };
 
-MineScreen.propTypes = {};
+HelpScreen.propTypes = {};
 
-MineScreen.defaultProps = {};
+HelpScreen.defaultProps = {};
 
-function MineScreen(props) {
+function HelpScreen(props) {
   return (
-    <SafeAreaView style={styles.container}>
-      <Text>Mine</Text>
-    </SafeAreaView>
+    <View style={styles.container}>
+      <Text>Help</Text>
+    </View>
   );
 }
 
@@ -41,4 +38,4 @@ function mapStateToProps(state) {
 //   return {};
 // }
 
-export default connect(mapStateToProps)(MineScreen);
+export default connect(mapStateToProps)(HelpScreen);

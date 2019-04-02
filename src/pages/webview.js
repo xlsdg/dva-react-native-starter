@@ -11,24 +11,18 @@ const styles = StyleSheet.create({
   },
 });
 
-HomeScreen.navigationOptions = props => {
-  return {
-    title: 'Hello',
-    // headerRight: ,
-    headerStyle: {
-      borderBottomWidth: 0,
-    },
-  };
+WebViewScreen.navigationOptions = props => {
+  return {};
 };
 
-HomeScreen.propTypes = {};
+WebViewScreen.propTypes = {};
 
-HomeScreen.defaultProps = {};
+WebViewScreen.defaultProps = {};
 
-function HomeScreen(props) {
+function WebViewScreen(props) {
   return (
     <View style={styles.container}>
-      <Text>Home</Text>
+      <Text>WebView</Text>
     </View>
   );
 }
@@ -44,4 +38,4 @@ function mapStateToProps(state) {
 //   return {};
 // }
 
-export default connect(mapStateToProps)(HomeScreen);
+export default connect(mapStateToProps)(WebViewScreen);
