@@ -11,7 +11,10 @@ const styles = StyleSheet.create({
   },
 });
 
-DetailScreen.navigationOptions = props => ({});
+DetailScreen.navigationOptions = props => {
+  // const { navigation, navigationOptions, screenProps } = props;
+  return {};
+};
 
 DetailScreen.propTypes = {};
 

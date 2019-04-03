@@ -12,6 +12,7 @@ const styles = StyleSheet.create({
 });
 
 SettingScreen.navigationOptions = props => {
+  // const { navigation, navigationOptions, screenProps } = props;
   return {};
 };
 

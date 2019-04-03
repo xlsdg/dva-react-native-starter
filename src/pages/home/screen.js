@@ -2,6 +2,7 @@
 import HomeScreen from './index';
 import DetailScreen from './detail';
 import SearchScreen from './search';
+import WebViewScreen from './webview';
 
 export default {
   Home: {
@@ -16,6 +17,11 @@ export default {
   },
   SearchApp: {
     screen: SearchScreen,
+    // path: '',
+    // navigationOptions: () => ({}),
+  },
+  WebView: {
+    screen: WebViewScreen,
     // path: '',
     // navigationOptions: () => ({}),
   },

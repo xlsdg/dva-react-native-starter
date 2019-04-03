@@ -18,7 +18,8 @@ react-native init DvaReactNativeStarter
     "android": "react-native run-android",
     "test": "jest",
     "lint": "eslint --ext .js src",
-    "lint:fix": "eslint --fix --ext .js src"
+    "lint:fix": "eslint --fix --ext .js src",
+    "prettier": "prettier --write './src/**/*.{js,jsx,ts,tsx,less,scss,css,json}'"
   }
 }
 ```

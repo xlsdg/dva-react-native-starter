@@ -18,13 +18,18 @@ import { formatMessage } from '@/utils/helper';
 //   return <Image style={styles.image} source={focused ? ActiveIcon : InactiveIcon} />;
 // }
 
-export default {
-  // title: '',
-  // tabBarVisible: '',
-  // tabBarIcon: renderTabBarIcon,
-  tabBarLabel: formatMessage({ id: 'page.home.tab' }),
-  // tabBarButtonComponent: '',
-  // tabBarAccessibilityLabel: '',
-  // tabBarTestID: '',
-  // tabBarOnPress: '',
-};
+export default function navigationOptions(props) {
+  // const { navigation, navigationOptions, screenProps } = props;
+  const { navigation } = props;
+
+  return {
+    // title: '',
+    tabBarVisible: navigation.state.index === 0,
+    tabBarIcon: renderTabBarIcon,
+    tabBarLabel: formatMessage({ id: 'page.home.tab' }),
+    // tabBarButtonComponent: '',
+    // tabBarAccessibilityLabel: '',
+    // tabBarTestID: '',
+    // tabBarOnPress: '',
+  };
+}

@@ -6,12 +6,29 @@ import { connect } from 'react-redux';
 import { createReduxContainer } from 'react-navigation-redux-helpers';
 
 import PageLoading from '@/components/PageLoading';
-import { NS_HOME } from '@/redux/namespaces/index';
 import { AppNavigator } from '@/routes/navigator';
 
 const App = createReduxContainer(AppNavigator);
 
+function getActiveRouteName(navigationState) {
+  if (!_.isPlainObject(navigationState)) {
+    return;
+  }
+
+  const route = navigationState.routes[navigationState.index];
+  if (_.isArray(route.routes)) {
+    return getActiveRouteName(route);
+  }
+
+  return route.routeName;
+}
+
 class Router extends React.PureComponent {
+  // state = {
+  //   count: 0,
+  //   timer: null,
+  // };
+
   componentDidMount() {
     const that = this;
     BackHandler.addEventListener('hardwareBackPress', that.onBackPress);
@@ -26,28 +43,36 @@ class Router extends React.PureComponent {
     const that = this;
     const { dispatch, router } = that.props;
 
-    if (router.index === 0) {
-      return false;
-      // return BackHandler.exitApp();
+    let hasProc = false;
+    const currentScreen = getActiveRouteName(router);
+    switch (currentScreen) {
+      case 'Home':
+      case 'Assets':
+      case 'Mine':
+        BackHandler.exitApp();
+        hasProc = true;
+        break;
+      default:
+        dispatch(NavigationActions.back());
+        hasProc = true;
+        break;
     }
 
-    dispatch(NavigationActions.back());
-    return true;
+    return hasProc;
   };
 
   render() {
     const that = this;
-    const { dispatch, router } = that.props;
-    const { loading } = that.props[NS_HOME];
+    const { dispatch, router, loading } = that.props;
 
-    return loading ? <PageLoading /> : <App dispatch={dispatch} state={router} />;
+    return loading.global ? <PageLoading /> : <App dispatch={dispatch} state={router} />;
   }
 }
 
 function mapStateToProps(state) {
   return {
+    loading: state.loading,
     router: state.router,
-    [NS_HOME]: _.cloneDeep(state[NS_HOME]),
   };
 }
 

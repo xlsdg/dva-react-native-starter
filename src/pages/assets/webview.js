@@ -12,6 +12,7 @@ const styles = StyleSheet.create({
 });
 
 WebViewScreen.navigationOptions = props => {
+  // const { navigation, navigationOptions, screenProps } = props;
   return {};
 };
 

@@ -13,6 +13,7 @@ const styles = StyleSheet.create({
 });
 
 SearchScreen.navigationOptions = props => {
+  // const { navigation, navigationOptions, screenProps } = props;
   return {
     header: null,
   };

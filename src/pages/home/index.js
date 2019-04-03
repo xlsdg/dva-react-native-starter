@@ -12,6 +12,7 @@ const styles = StyleSheet.create({
 });
 
 HomeScreen.navigationOptions = props => {
+  // const { navigation, navigationOptions, screenProps } = props;
   return {
     title: 'Hello',
     // headerRight: ,

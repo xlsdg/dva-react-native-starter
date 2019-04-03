@@ -13,6 +13,7 @@ const styles = StyleSheet.create({
 });
 
 AssetsScreen.navigationOptions = props => {
+  // const { navigation, navigationOptions, screenProps } = props;
   return {
     header: null,
   };
