@@ -1,7 +1,7 @@
 {
   "compilerOptions": {
     "noLib": false,
-    "target": "esnext",
+    // "target": "esnext",
     "checkJs": false,
     "experimentalDecorators": true,
     "allowSyntheticDefaultImports": false,
