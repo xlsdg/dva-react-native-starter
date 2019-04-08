@@ -5,8 +5,8 @@ import { createStackNavigator, createBottomTabNavigator } from 'react-navigation
 import HomeTabNavigatorOptions from '@/pages/home/tab';
 import HomeStackRouteConfigs from '@/pages/home/screen';
 
-import AssetsTabNavigatorOptions from '@/pages/assets/tab';
-import AssetsStackRouteConfigs from '@/pages/assets/screen';
+import NewsTabNavigatorOptions from '@/pages/news/tab';
+import NewsStackRouteConfigs from '@/pages/news/screen';
 
 import MineTabNavigatorOptions from '@/pages/mine/tab';
 import MineScreenRouteConfigs from '@/pages/mine/screen';
@@ -66,7 +66,7 @@ const HomeStackConfig = {
 };
 export const HomeStack = createStackNavigator(HomeStackRouteConfigs, HomeStackConfig);
 
-const AssetsStackConfig = {
+const NewsStackConfig = {
   // initialRouteName: ,
   // initialRouteParams: ,
   // initialRouteKey: ,
@@ -85,7 +85,7 @@ const AssetsStackConfig = {
   // onTransitionEnd: ,
   // transparentCard: ,
 };
-export const AssetsStack = createStackNavigator(AssetsStackRouteConfigs, AssetsStackConfig);
+export const NewsStack = createStackNavigator(NewsStackRouteConfigs, NewsStackConfig);
 
 const MineScreenConfig = {
   // initialRouteName: ,
@@ -114,10 +114,10 @@ const BottomTabNavigatorRouteConfigs = {
     // path: '',
     navigationOptions: HomeTabNavigatorOptions,
   },
-  Assets: {
-    screen: AssetsStack,
+  News: {
+    screen: NewsStack,
     // path: '',
-    navigationOptions: AssetsTabNavigatorOptions,
+    navigationOptions: NewsTabNavigatorOptions,
   },
   Mine: {
     screen: MineStack,

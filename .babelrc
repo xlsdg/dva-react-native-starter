@@ -19,7 +19,7 @@
         ".ios.js",
         ".android.js",
         ".native.js",
-        ".js",
+        ".js"
       ],
       "alias": {
         "@": "./src"

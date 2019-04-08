@@ -4,7 +4,7 @@ import { StyleSheet, Text } from 'react-native';
 import { connect } from 'react-redux';
 import { SafeAreaView } from 'react-navigation';
 
-import { NS_ASSETS } from '@/redux/namespaces/index';
+import { NS_NEWS } from '@/redux/namespaces';
 
 const styles = StyleSheet.create({
   container: {
@@ -12,21 +12,21 @@ const styles = StyleSheet.create({
   },
 });
 
-AssetsScreen.navigationOptions = props => {
+NewsScreen.navigationOptions = props => {
   // const { navigation, navigationOptions, screenProps } = props;
   return {
     header: null,
   };
 };
 
-AssetsScreen.propTypes = {};
+NewsScreen.propTypes = {};
 
-AssetsScreen.defaultProps = {};
+NewsScreen.defaultProps = {};
 
-function AssetsScreen(props) {
+function NewsScreen(props) {
   return (
     <SafeAreaView style={styles.container}>
-      <Text>Assets</Text>
+      <Text>News</Text>
     </SafeAreaView>
   );
 }
@@ -34,7 +34,7 @@ function AssetsScreen(props) {
 function mapStateToProps(state) {
   return {
     loading: state.loading,
-    [NS_ASSETS]: state[NS_ASSETS],
+    [NS_NEWS]: state[NS_NEWS],
   };
 }
 
@@ -42,4 +42,4 @@ function mapStateToProps(state) {
 //   return {};
 // }
 
-export default connect(mapStateToProps)(AssetsScreen);
+export default connect(mapStateToProps)(NewsScreen);

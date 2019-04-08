@@ -1,9 +1,9 @@
 import Home from '@/locales/zh-CN/home';
-import Assets from '@/locales/zh-CN/assets';
+import News from '@/locales/zh-CN/news';
 import Mine from '@/locales/zh-CN/mine';
 
 export default {
   ...Home,
-  ...Assets,
+  ...News,
   ...Mine,
 };

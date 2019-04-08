@@ -59,7 +59,7 @@ react-native link react-native-gesture-handler
 yarn add dva-core@next dva-loading@next react-redux
 ```
 
-添加 `Lodash.js` 和 `PropTypes`：
+添加第三方组件：
 
 ```bash
 yarn add lodash prop-types

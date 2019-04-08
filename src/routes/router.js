@@ -47,7 +47,7 @@ class Router extends React.PureComponent {
     const currentScreen = getActiveRouteName(router);
     switch (currentScreen) {
       case 'Home':
-      case 'Assets':
+      case 'News':
       case 'Mine':
         BackHandler.exitApp();
         hasProc = true;

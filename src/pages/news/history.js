@@ -3,7 +3,7 @@ import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 import { connect } from 'react-redux';
 
-import { NS_ASSETS } from '@/redux/namespaces/index';
+import { NS_NEWS } from '@/redux/namespaces';
 
 const styles = StyleSheet.create({
   container: {
@@ -31,7 +31,7 @@ function HistoryScreen(props) {
 function mapStateToProps(state) {
   return {
     loading: state.loading,
-    [NS_ASSETS]: state[NS_ASSETS],
+    [NS_NEWS]: state[NS_NEWS],
   };
 }
 

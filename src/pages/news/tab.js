@@ -4,8 +4,8 @@
 
 import { formatMessage } from '@/utils/helper';
 
-// import ActiveIcon from '@/assets/tabs/assets/active.png';
-// import InactiveIcon from '@/assets/tabs/assets/inactive.png';
+// import ActiveIcon from '@/assets/tabs/news/active.png';
+// import InactiveIcon from '@/assets/tabs/news/inactive.png';
 
 // const styles = StyleSheet.create({
 //   image: {
@@ -26,7 +26,7 @@ export default function navigationOptions(props) {
     // title: '',
     tabBarVisible: navigation.state.index === 0,
     tabBarIcon: renderTabBarIcon,
-    tabBarLabel: formatMessage({ id: 'page.assets.tab' }),
+    tabBarLabel: formatMessage({ id: 'page.news.tab' }),
     // tabBarButtonComponent: '',
     // tabBarAccessibilityLabel: '',
     // tabBarTestID: '',

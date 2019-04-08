@@ -1,14 +1,14 @@
 // import _ from 'lodash';
-import AssetsScreen from './index';
+import NewsScreen from './index';
 import HistoryScreen from './history';
 
 export default {
-  Assets: {
-    screen: AssetsScreen,
+  News: {
+    screen: NewsScreen,
     // path: '',
     // navigationOptions: () => ({}),
   },
-  AssetsHistory: {
+  NewsHistory: {
     screen: HistoryScreen,
     // path: '',
     // navigationOptions: () => ({}),

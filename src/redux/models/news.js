@@ -1,11 +1,11 @@
 import _ from 'lodash';
 
-import { NS_ASSETS } from '@/redux/namespaces/index';
+import { NS_NEWS } from '@/redux/namespaces/index';
 
 const initialState = {};
 
 export default {
-  namespace: NS_ASSETS,
+  namespace: NS_NEWS,
   state: _.cloneDeep(initialState),
   reducers: {},
   effects: {},
