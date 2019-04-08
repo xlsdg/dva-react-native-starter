@@ -5,7 +5,7 @@ import { NavigationActions } from 'react-navigation';
 import { connect } from 'react-redux';
 import { createReduxContainer } from 'react-navigation-redux-helpers';
 
-import PageLoading from '@/components/PageLoading';
+import Loading from '@/components/Loading';
 import { AppNavigator } from '@/routes/navigator';
 
 const App = createReduxContainer(AppNavigator);
@@ -65,7 +65,7 @@ class Router extends React.PureComponent {
     const that = this;
     const { dispatch, router, loading } = that.props;
 
-    return loading.global ? <PageLoading /> : <App dispatch={dispatch} state={router} />;
+    return loading.global ? <Loading /> : <App dispatch={dispatch} state={router} />;
   }
 }
 

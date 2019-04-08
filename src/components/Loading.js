@@ -10,16 +10,16 @@ const styles = StyleSheet.create({
   },
 });
 
-// PageLoading.propTypes = {};
+// Loading.propTypes = {};
 
-// PageLoading.defaultProps = {};
+// Loading.defaultProps = {};
 
-function PageLoading() {
+function Loading(props) {
   return (
     <View style={styles.container}>
-      <ActivityIndicator />
+      <ActivityIndicator {...props} />
     </View>
   );
 }
 
-export default PageLoading;
+export default Loading;
