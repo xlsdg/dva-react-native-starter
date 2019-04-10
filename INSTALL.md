@@ -56,7 +56,7 @@ react-native link react-native-gesture-handler
 添加 `Dva.js`：
 
 ```bash
-yarn add dva-core@next dva-loading@next react-redux
+yarn add dva-core dva-loading react-redux
 ```
 
 添加第三方组件：
