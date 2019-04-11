@@ -1,7 +1,7 @@
 // import _ from 'lodash';
 import {
   // Common
-  TYPE_LOAD_PAGE,
+  TYPE_SET_LOADING,
   TYPE_SHOW_MODAL,
 } from '@/redux/types';
 
@@ -25,8 +25,8 @@ export function getAction(type, payload, namespace) {
 }
 
 // Common
-export function actionLoadPage(payload, namespace) {
-  return getAction(TYPE_LOAD_PAGE, payload, namespace);
+export function actionSetLoading(payload, namespace) {
+  return getAction(TYPE_SET_LOADING, payload, namespace);
 }
 
 export function actionShowModal(payload, namespace) {

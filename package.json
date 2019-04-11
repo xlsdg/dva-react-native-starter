@@ -15,14 +15,14 @@
   "dependencies": {
     "axios": "^0.18.0",
     "dva-core": "^1.4.0",
-    "dva-loading": "^3.0.0",
+    "dva-loading": "^3.0.2",
     "lodash": "^4.17.11",
     "prop-types": "^15.7.2",
     "qs": "^6.7.0",
     "react": "16.8.3",
-    "react-native": "0.59.3",
+    "react-native": "0.59.4",
     "react-native-gesture-handler": "^1.1.0",
-    "react-navigation": "^3.6.1",
+    "react-navigation": "^3.7.1",
     "react-navigation-redux-helpers": "^3.0.0",
     "react-redux": "^7.0.1"
   },
