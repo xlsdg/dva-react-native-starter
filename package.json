@@ -20,8 +20,9 @@
     "prop-types": "^15.7.2",
     "qs": "^6.7.0",
     "react": "16.8.3",
-    "react-native": "0.59.4",
+    "react-native": "0.59.5",
     "react-native-gesture-handler": "^1.1.0",
+    "react-native-screens": "^1.0.0-alpha.22",
     "react-navigation": "^3.8.1",
     "react-navigation-redux-helpers": "^3.0.2",
     "react-redux": "^7.0.2"

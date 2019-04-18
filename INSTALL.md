@@ -12,14 +12,14 @@ react-native init DvaReactNativeStarter
 {
   "name": "dva-react-native-starter",
   "scripts": {
-    "start": "react-native start --reset-cache",
+    "android": "react-native run-android",
     "ios": "react-native run-ios",
     "ios:device": "react-native run-ios --device",
-    "android": "react-native run-android",
-    "test": "jest",
     "lint": "eslint --ext .js src",
     "lint:fix": "eslint --fix --ext .js src",
-    "prettier": "prettier --write './src/**/*.{js,jsx,ts,tsx,less,scss,css}'"
+    "prettier": "prettier --write './src/**/*.{js,jsx,ts,tsx,less,scss,css}'",
+    "start": "react-native start --reset-cache",
+    "test": "jest"
   }
 }
 ```
@@ -52,6 +52,17 @@ react-native link react-native-gesture-handler
 修改 `android/app/src/main/java/com/dvareactnativestarter/MainActivity.java` 文件：
 
 参考：https://reactnavigation.org/docs/en/getting-started.html 或 https://kmagiera.github.io/react-native-gesture-handler/docs/getting-started.html
+
+添加页面优化：
+
+```bash
+yarn add react-native-screens
+react-native link react-native-screens
+```
+
+修改 `android/app/src/main/java/com/dvareactnativestarter/MainActivity.java` 文件：
+
+参考：https://github.com/kmagiera/react-native-screens
 
 添加 `Dva.js`：
 
