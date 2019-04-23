@@ -67,7 +67,7 @@ react-native link react-native-screens
 添加 `Dva.js`：
 
 ```bash
-yarn add dva-core dva-loading react-redux
+yarn add dva-core@next dva-loading react-redux redux
 ```
 
 添加第三方组件：

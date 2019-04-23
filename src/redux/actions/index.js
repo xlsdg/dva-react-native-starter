@@ -5,7 +5,7 @@ import {
   TYPE_SHOW_MODAL,
 } from '@/redux/types';
 
-export function actionCreator({ error, type, payload, meta, namespace }) {
+export function actionCreator({ error, type, payload = {}, meta, namespace }) {
   return {
     type: (namespace ? `${namespace}/` : '') + type,
     payload,
@@ -14,7 +14,7 @@ export function actionCreator({ error, type, payload, meta, namespace }) {
   };
 }
 
-export function getAction(type, payload, namespace) {
+export function getAction(type, payload = {}, namespace) {
   return actionCreator({
     error: false,
     type,
