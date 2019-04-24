@@ -13,10 +13,13 @@ react-native init DvaReactNativeStarter
   "name": "dva-react-native-starter",
   "scripts": {
     "android": "react-native run-android",
+    "debug": "react-devtools",
     "ios": "react-native run-ios",
     "ios:device": "react-native run-ios --device",
     "lint": "eslint --ext .js src",
     "lint:fix": "eslint --fix --ext .js src",
+    "log:android": "react-native log-android",
+    "log:ios": "react-native log-ios",
     "prettier": "prettier --write './src/**/*.{js,jsx,ts,tsx,less,scss,css}'",
     "start": "react-native start --reset-cache",
     "test": "jest"
@@ -86,4 +89,11 @@ yarn add qs axios
 
 ```js
 import './src/app';
+```
+
+添加调试工具：
+
+```bash
+yarn add -D react-devtools
+adb reverse tcp:8097 tcp:8097
 ```
