@@ -10,16 +10,17 @@ react-native init DvaReactNativeStarter
 
 ```json
 {
-  "name": "dva-react-native-starter",
   "scripts": {
     "android": "react-native run-android",
+    "android:log": "react-native log-android",
+    "android:release": "react-native run-android --variant release",
     "debug": "react-devtools",
     "ios": "react-native run-ios",
     "ios:device": "react-native run-ios --device",
+    "ios:log": "react-native log-ios",
+    "ios:release": "react-native run-ios --configuration Release",
     "lint": "eslint --ext .js src",
     "lint:fix": "eslint --fix --ext .js src",
-    "log:android": "react-native log-android",
-    "log:ios": "react-native log-ios",
     "prettier": "prettier --write './src/**/*.{js,jsx,ts,tsx,less,scss,css}'",
     "start": "react-native start --reset-cache",
     "test": "jest"
@@ -42,7 +43,7 @@ yarn add -D babel-eslint eslint eslint-config-prettier eslint-plugin-prettier es
 删除 `babel.config.js`，添加 `Babel`：
 
 ```bash
-yarn add -D babel-plugin-module-resolver babel-plugin-transform-react-remove-prop-types babel-plugin-transform-remove-console babel-plugin-transform-remove-debugger babel-plugin-lodash
+yarn add -D babel-plugin-module-resolver babel-plugin-lodash
 ```
 
 添加导航：
