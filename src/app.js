@@ -1,7 +1,6 @@
 // import _ from 'lodash';
 import React from 'react';
 import { AppRegistry } from 'react-native';
-import { useScreens } from 'react-native-screens';
 
 import { name as appName } from '../app.json';
 
@@ -9,8 +8,6 @@ import dva from '@/utils/dva';
 import getModels from '@/redux/models/index';
 import { routerMiddleware, routerReducer } from '@/routes/index';
 import Router from '@/routes/router';
-
-useScreens();
 
 const app = dva({
   initialState: {},

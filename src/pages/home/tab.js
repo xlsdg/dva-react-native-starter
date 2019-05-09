@@ -25,7 +25,7 @@ export default function navigationOptions(props) {
   return {
     // title: '',
     tabBarVisible: navigation.state.index === 0,
-    tabBarIcon: renderTabBarIcon,
+    // tabBarIcon: renderTabBarIcon,
     tabBarLabel: formatMessage({ id: 'page.home.tab' }),
     // tabBarButtonComponent: '',
     // tabBarAccessibilityLabel: '',
