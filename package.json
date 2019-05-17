@@ -30,7 +30,8 @@
     "react-navigation": "^3.10.1",
     "react-navigation-redux-helpers": "^3.0.2",
     "react-redux": "^7.0.3",
-    "redux": "^4.0.1"
+    "redux": "^4.0.1",
+    "reselect": "^4.0.0"
   },
   "devDependencies": {
     "@babel/core": "^7.4.4",
