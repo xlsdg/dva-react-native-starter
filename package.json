@@ -27,7 +27,7 @@
     "react": "16.8.3",
     "react-native": "0.59.8",
     "react-native-gesture-handler": "^1.2.1",
-    "react-navigation": "^3.9.2",
+    "react-navigation": "^3.10.1",
     "react-navigation-redux-helpers": "^3.0.2",
     "react-redux": "^7.0.3",
     "redux": "^4.0.1"
@@ -43,7 +43,7 @@
     "babel-plugin-module-resolver": "^3.2.0",
     "eslint": "^5.16.0",
     "eslint-config-alloy": "^1.4.2",
-    "eslint-config-prettier": "^4.2.0",
+    "eslint-config-prettier": "^4.3.0",
     "eslint-import-resolver-babel-module": "^5.1.0",
     "eslint-plugin-prettier": "^3.1.0",
     "eslint-plugin-react": "^7.13.0",
