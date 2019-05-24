@@ -1,60 +1,14 @@
 // import _ from 'lodash';
-import { AsyncStorage } from 'react-native';
+import AsyncStorage from '@react-native-community/async-storage';
 
-function getItem(...args) {
-  return AsyncStorage.getItem(...args);
-}
-
-function setItem(...args) {
-  return AsyncStorage.setItem(...args);
-}
-
-function removeItem(...args) {
-  return AsyncStorage.removeItem(...args);
-}
-
-function mergeItem(...args) {
-  return AsyncStorage.mergeItem(...args);
-}
-
-function clear(...args) {
-  return AsyncStorage.clear(...args);
-}
-
-function getAllKeys(...args) {
-  return AsyncStorage.getAllKeys(...args);
-}
-
-function flushGetRequests(...args) {
-  return AsyncStorage.flushGetRequests(...args);
-}
-
-function multiGet(...args) {
-  return AsyncStorage.multiGet(...args);
-}
-
-function multiSet(...args) {
-  return AsyncStorage.multiSet(...args);
-}
-
-function multiRemove(...args) {
-  return AsyncStorage.multiRemove(...args);
-}
-
-function multiMerge(...args) {
-  return AsyncStorage.multiMerge(...args);
-}
-
-export default {
-  getItem,
-  setItem,
-  removeItem,
-  mergeItem,
-  clear,
-  getAllKeys,
-  flushGetRequests,
-  multiGet,
-  multiSet,
-  multiRemove,
-  multiMerge,
-};
+export const getItem = AsyncStorage.getItem;
+export const setItem = AsyncStorage.setItem;
+export const removeItem = AsyncStorage.removeItem;
+export const mergeItem = AsyncStorage.mergeItem;
+export const clear = AsyncStorage.clear;
+export const getAllKeys = AsyncStorage.getAllKeys;
+export const flushGetRequests = AsyncStorage.flushGetRequests;
+export const multiGet = AsyncStorage.multiGet;
+export const multiSet = AsyncStorage.multiSet;
+export const multiRemove = AsyncStorage.multiRemove;
+export const multiMerge = AsyncStorage.multiMerge;

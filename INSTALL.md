@@ -14,7 +14,6 @@ react-native init DvaReactNativeStarter
     "android": "react-native run-android",
     "android:log": "react-native log-android",
     "android:release": "react-native run-android --variant release",
-    "debug": "react-devtools",
     "ios": "react-native run-ios",
     "ios:device": "react-native run-ios --device",
     "ios:log": "react-native log-ios",
@@ -49,19 +48,17 @@ yarn add -D babel-plugin-module-resolver babel-plugin-lodash
 添加导航：
 
 ```bash
-yarn add react-navigation react-navigation-redux-helpers react-native-gesture-handler
-react-native link react-native-gesture-handler
+yarn add react-navigation react-navigation-redux-helpers react-native-gesture-handler && react-native link react-native-gesture-handler
 ```
 
 修改 `android/app/src/main/java/com/dvareactnativestarter/MainActivity.java` 文件：
 
 参考：https://reactnavigation.org/docs/en/getting-started.html 或 https://kmagiera.github.io/react-native-gesture-handler/docs/getting-started.html
 
-添加页面优化：
+添加页面优化（可选）：
 
 ```bash
-yarn add react-native-screens
-react-native link react-native-screens
+yarn add react-native-screens && react-native link react-native-screens
 ```
 
 修改 `android/app/src/main/java/com/dvareactnativestarter/MainActivity.java` 文件：
@@ -71,7 +68,7 @@ react-native link react-native-screens
 添加 `Dva.js`：
 
 ```bash
-yarn add dva-core@next dva-loading react-redux redux
+yarn add dva-core@next dva-immer dva-loading redux react-redux
 ```
 
 添加第三方组件：
@@ -90,11 +87,4 @@ yarn add qs axios
 
 ```js
 import './src/app';
-```
-
-添加调试工具：
-
-```bash
-yarn add -D react-devtools
-adb reverse tcp:8097 tcp:8097
 ```

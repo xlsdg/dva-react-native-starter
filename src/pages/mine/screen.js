@@ -1,9 +1,9 @@
 // import _ from 'lodash';
-import MineScreen from './index';
+import Mine from './index';
 
 export default {
   Mine: {
-    screen: MineScreen,
+    screen: Mine,
     // path: '',
     // navigationOptions: () => ({}),
   },

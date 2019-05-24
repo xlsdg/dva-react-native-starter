@@ -109,17 +109,17 @@ const MineScreenConfig = {
 export const MineStack = createStackNavigator(MineScreenRouteConfigs, MineScreenConfig);
 
 const BottomTabNavigatorRouteConfigs = {
-  Home: {
+  HomeStack: {
     screen: HomeStack,
     // path: '',
     navigationOptions: HomeTabNavigatorOptions,
   },
-  News: {
+  NewsStack: {
     screen: NewsStack,
     // path: '',
     navigationOptions: NewsTabNavigatorOptions,
   },
-  Mine: {
+  MineStack: {
     screen: MineStack,
     // path: '',
     navigationOptions: MineTabNavigatorOptions,
@@ -127,7 +127,7 @@ const BottomTabNavigatorRouteConfigs = {
 };
 
 const BottomTabNavigatorConfig = {
-  initialRouteName: 'Home',
+  initialRouteName: 'HomeStack',
   // resetOnBlur: false,
   // order: [],
   // paths: ,

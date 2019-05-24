@@ -1,24 +1,33 @@
 // import _ from 'lodash';
 import React from 'react';
 import { AppRegistry } from 'react-native';
+import { createReactNavigationReduxMiddleware, createNavigationReducer } from 'react-navigation-redux-helpers';
 
-import { name as appName } from '../app.json';
+import { name as AppName } from '../app.json';
 
-import dva from '@/utils/dva';
-import getModels from '@/redux/models/index';
-import { routerMiddleware, routerReducer } from '@/routes/index';
+import { AppNavigator } from '@/routes/navigator';
 import Router from '@/routes/router';
 
-const app = dva({
+import dva from './dva';
+
+const routerReducer = createNavigationReducer(AppNavigator);
+const routerMiddleware = createReactNavigationReduxMiddleware(state => state.router);
+
+const App = dva({
+  // history: ,
   initialState: {},
-  models: getModels(),
-  extraReducers: { router: routerReducer },
-  onAction: [routerMiddleware],
   // onError: (error, dispatch) => {
   //   error.preventDefault();
   // },
+  onAction: [routerMiddleware],
+  // onStateChange: state => {},
+  // onReducer: reducer => {},
+  // onEffect: effect => {},
+  // onHmr: () => {},
+  extraReducers: {
+    router: routerReducer,
+  },
+  // extraEnhancers: [],
 });
 
-const App = app.started(<Router />);
-
-AppRegistry.registerComponent(appName, () => App);
+AppRegistry.registerComponent(AppName, () => App(<Router />));

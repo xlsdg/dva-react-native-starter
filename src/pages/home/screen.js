@@ -1,9 +1,9 @@
 // import _ from 'lodash';
-import HomeScreen from './index';
+import Home from './index';
 
 export default {
   Home: {
-    screen: HomeScreen,
+    screen: Home,
     // path: '',
     // navigationOptions: () => ({}),
   },

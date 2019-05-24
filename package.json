@@ -6,7 +6,6 @@
     "android": "react-native run-android",
     "android:log": "react-native log-android",
     "android:release": "react-native run-android --variant release",
-    "debug": "react-devtools",
     "ios": "react-native run-ios",
     "ios:device": "react-native run-ios --device",
     "ios:log": "react-native log-ios",
@@ -20,6 +19,7 @@
   "dependencies": {
     "axios": "^0.18.0",
     "dva-core": "^1.6.0-beta.2",
+    "dva-immer": "^0.4.3",
     "dva-loading": "^3.0.3",
     "lodash": "^4.17.11",
     "prop-types": "^15.7.2",

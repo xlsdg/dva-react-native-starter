@@ -1,34 +1,21 @@
-// import _ from 'lodash';
-import {
-  // Common
-  TYPE_SET_LOADING,
-  TYPE_SHOW_MODAL,
-} from '@/redux/types';
+import { TYPE_SET_LOADING, TYPE_SET_MODAL } from '@/redux/types/index';
 
-export function actionCreator({ error, type, payload = {}, meta, namespace }) {
+import { hasString } from '@/utils/helper';
+
+export function actionCreator(error, namespace, type, payload = {}, meta = {}) {
   return {
-    type: (namespace ? `${namespace}/` : '') + type,
-    payload,
     error,
+    type: `${hasString(namespace) ? `${namespace}/` : ''}${type}`,
+    payload,
     meta,
   };
 }
 
-export function getAction(type, payload = {}, namespace) {
-  return actionCreator({
-    error: false,
-    type,
-    payload,
-    meta: null,
-    namespace,
-  });
+export function getAction(type) {
+  return ({ error, meta, ...others }, namespace) => actionCreator(error, namespace, type, others, meta);
 }
 
-// Common
-export function actionSetLoading(payload, namespace) {
-  return getAction(TYPE_SET_LOADING, payload, namespace);
-}
-
-export function actionShowModal(payload, namespace) {
-  return getAction(TYPE_SHOW_MODAL, payload, namespace);
-}
+export default {
+  [TYPE_SET_LOADING]: getAction(TYPE_SET_LOADING),
+  [TYPE_SET_MODAL]: getAction(TYPE_SET_MODAL),
+};

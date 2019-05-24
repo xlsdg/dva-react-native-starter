@@ -1,15 +1,5 @@
 {
   "presets": ["module:metro-react-native-babel-preset"],
-  "env": {
-    "development": {},
-    "production": {
-      "plugins": [
-        "transform-react-remove-prop-types",
-        "transform-remove-console",
-        "transform-remove-debugger"
-      ]
-    }
-  },
   "plugins": [
     "lodash",
     ["module-resolver", {

@@ -1,9 +1,9 @@
 // import _ from 'lodash';
-import NewsScreen from './index';
+import News from './index';
 
 export default {
   News: {
-    screen: NewsScreen,
+    screen: News,
     // path: '',
     // navigationOptions: () => ({}),
   },

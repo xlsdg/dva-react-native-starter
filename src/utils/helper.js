@@ -1,4 +1,4 @@
-// import _ from 'lodash';
+import _ from 'lodash';
 
 import EN_US from '@/locales/en-US';
 import ZH_CH from '@/locales/zh-CN';
@@ -23,6 +23,10 @@ export function getLocale() {
   return 'zh-CN';
 }
 
+export function getToken() {
+  return '';
+}
+
 export function formatMessage({ id }) {
   const lang = getLocale();
   let message = '';
@@ -38,4 +42,29 @@ export function formatMessage({ id }) {
   }
 
   return message;
+}
+
+export function hasString(str) {
+  return _.isString(str) && !_.isEmpty(str);
+}
+
+export function hasArray(arr) {
+  return _.isArray(arr) && !_.isEmpty(arr);
+}
+
+export function hasPlainObject(obj) {
+  return _.isPlainObject(obj) && !_.isEmpty(obj);
+}
+
+export function getActiveRouteName(navigationState) {
+  if (!hasPlainObject(navigationState)) {
+    return;
+  }
+
+  const route = navigationState.routes[navigationState.index];
+  if (hasArray(route.routes)) {
+    return getActiveRouteName(route);
+  }
+
+  return route.routeName;
 }

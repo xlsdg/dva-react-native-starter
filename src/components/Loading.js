@@ -10,10 +10,6 @@ const styles = StyleSheet.create({
   },
 });
 
-// Loading.propTypes = {};
-
-// Loading.defaultProps = {};
-
 function Loading(props) {
   return (
     <View style={styles.container}>
@@ -21,5 +17,9 @@ function Loading(props) {
     </View>
   );
 }
+
+// Loading.propTypes = {};
+
+// Loading.defaultProps = {};
 
 export default Loading;
