@@ -1,6 +1,7 @@
 // import _ from 'lodash';
 import { Platform } from 'react-native';
-import { createStackNavigator, createBottomTabNavigator } from 'react-navigation';
+import { createStackNavigator } from 'react-navigation-stack';
+import { createBottomTabNavigator } from 'react-navigation-tabs';
 
 import HomeTabNavigatorOptions from '@/pages/home/tab';
 import HomeStackRouteConfigs from '@/pages/home/screen';

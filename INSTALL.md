@@ -48,27 +48,30 @@ yarn add -D babel-plugin-module-resolver babel-plugin-lodash
 添加导航：
 
 ```bash
-yarn add react-navigation react-navigation-redux-helpers react-native-gesture-handler && react-native link react-native-gesture-handler
+yarn add react-navigation react-navigation-redux-helpers react-navigation-stack react-navigation-tabs
 ```
 
-修改 `android/app/src/main/java/com/dvareactnativestarter/MainActivity.java` 文件：
+参考：https://reactnavigation.org/docs/en/getting-started.html
 
-参考：https://reactnavigation.org/docs/en/getting-started.html 或 https://kmagiera.github.io/react-native-gesture-handler/docs/getting-started.html
-
-添加页面优化（可选）：
+添加导航依赖：
 
 ```bash
-yarn add react-native-screens && react-native link react-native-screens
+yarn add react-native-reanimated react-native-gesture-handler react-native-screens
 ```
 
-修改 `android/app/src/main/java/com/dvareactnativestarter/MainActivity.java` 文件：
+修改 `android/app/build.gradle` 文件，执行 `cd ios && pod install && cd ..`。
 
-参考：https://github.com/kmagiera/react-native-screens
+参考：
+
+- https://github.com/kmagiera/react-native-reanimated
+- https://kmagiera.github.io/react-native-gesture-handler/docs/getting-started.html
+- https://github.com/kmagiera/react-native-screens
+
 
 添加 `Dva.js`：
 
 ```bash
-yarn add dva-core@next dva-immer dva-loading redux react-redux
+yarn add dva-core dva-immer dva-loading redux react-redux
 ```
 
 添加第三方组件：
