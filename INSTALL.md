@@ -67,7 +67,6 @@ yarn add react-native-reanimated react-native-gesture-handler react-native-scree
 - https://kmagiera.github.io/react-native-gesture-handler/docs/getting-started.html
 - https://github.com/kmagiera/react-native-screens
 
-
 添加 `Dva.js`：
 
 ```bash
